@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Function to calculate the factorial of a number
+
+        function isLeapYear(year) {
+    // A year is a leap year if it is divisible by 4 but not by 100, 
+    // except if it is also divisible by 400.
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        return true;
+    }
+    return false;
+}
+
+// Example usage:
+let year = 2024; // You can change this to any year you want to test
+if (isLeapYear(year)) {
+    console.log(year + " is a leap year.");
+} else {
+    console.log(year + " is not a leap year.");
+}
+
+// Function to calculate the age and price
+        function getTicketPrice(age) {
+            if (age <= 12) {
+                return 10;
+            } else if (age >= 13 && age <= 17) {
+                return 15;
+            } else if (age >= 18) {
+                return 20;
+            } else {
+                return "Invalid age";
+            }
+        }
+
+        // Prompt the user for their age
+        let age = prompt("Please enter your age:");
+
+        // Convert the age to a number
+        age = Number(age);
+
+        // Determine the ticket price
+        let ticketPrice = getTicketPrice(age);
+
+        // Display the result
+        if (ticketPrice !== "Invalid age") {
+            alert("Your ticket price is: $" + ticketPrice);
+        } else {
+            alert("Please enter a valid age.");
+        }
+
+// Recursive function to calculate the power of a number
+
+        function power(base, exponent) {
+    // Base case: any number to the power of 0 is 1
+    if (exponent === 0) {
+        return 1;
+    }
+
+    // Recursive case: multiply the base by the result of the base to the power of (exponent - 1)
+    return base * power(base, exponent - 1);
+}
+
+// Example usage:
+console.log(power(2, 3)); // Output: 8
+console.log(power(5, 0)); // Output: 1
+console.log(power(7, 2)); // Output: 49
+
+    </script>
+</body>
+</html>
+
+    </script>
+</body>
+
+</html>
